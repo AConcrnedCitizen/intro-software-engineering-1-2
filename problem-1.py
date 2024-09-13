@@ -24,10 +24,10 @@ class Employee:
         Net Pay: ${self.gross - (self.gross*self.withholding_rate + self.gross*self.levy)}
         ------- END -------
     '''
-    
-    
-if __name__ == '__main__':
-    a = Employee('John Smith', 10, 60.75, 0.30, 0.02)
-    print(str(a))             float(input("Enter the pay rate: ")), float(input("Enter the withholding rate: ")), float(input("Enter the levy: ")))
+
+
+# Creates an employee object
+a = Employee(input("Enter your name: "), float(input("Enter the hours worked: ")), 
+             float(input("Enter the pay rate: ")), float(input("Enter the withholding rate: ")), float(input("Enter the levy: ")))
 # Prints the pay slip
 print(str(a))
