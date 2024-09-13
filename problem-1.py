@@ -1,4 +1,5 @@
 class Employee:
+    # Constructor
     def __init__(self, name, hours, rate, withholding_rate, levy):
         self.name = name
         self.hours = hours
@@ -7,6 +8,8 @@ class Employee:
         self.levy = levy
         self.gross = self.rate*self.hours
         
+
+    # Creates the pay slip as a string
     def __str__(self) -> str:
         return f'''
         ------- PAY SLIP -------
@@ -25,4 +28,6 @@ class Employee:
     
 if __name__ == '__main__':
     a = Employee('John Smith', 10, 60.75, 0.30, 0.02)
-    print(str(a))
+    print(str(a))             float(input("Enter the pay rate: ")), float(input("Enter the withholding rate: ")), float(input("Enter the levy: ")))
+# Prints the pay slip
+print(str(a))

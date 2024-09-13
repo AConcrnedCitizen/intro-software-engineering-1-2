@@ -1,3 +1,4 @@
+# Dict of resturaunts with their dietary options
 resturaunts = {
     "Joe's Gourmet Burgers": {
         "vegetarian": False,
@@ -28,17 +29,20 @@ resturaunts = {
 
 print("ANSWER THE FOLLOWING QUESTIONS WITH 'yes' OR 'no'")
 
-vegetarian = input("Is anyone in your party a vegetarian? ")
-vegetarian = True if vegetarian.lower().startswith('y') else False
+# Function that takes the answer and interprets it as a boolean
+def parse_answer(answer):
+    return True if answer.startswith("y") else False
 
-vegan = input("Is anyone in your party a vegan? ")
-vegan = True if vegan.lower().startswith('y') else False
+# Asks the user if they are vegetarian, vegan, or gluten-free
+vegetarian = parse_answer(input("Are you vegetarian? "))
+vegan = parse_answer(input("Are you vegan? "))
+gluten_free = parse_answer(input("Are you gluten-free? "))
 
-gluten_free = input("Is anyone in your party gluten-free? ")
-gluten_free = True if gluten_free.lower().startswith('y') else False
-
-print("Here are your restaurant choices:\n\n")
 for resturaunt in resturaunts:
-    if (vegetarian and resturaunts[resturaunt]["vegetarian"]) or (vegan and resturaunts[resturaunt]["vegan"]) or (gluten_free and resturaunts[resturaunt]["gluten-free"]):
-        print(resturaunt)
-          
+    if not vegetarian and resturaunts[resturaunt]["vegetarian"]:
+        continue
+    if not vegan and resturaunts[resturaunt]["vegan"]:
+        continue
+    if not gluten_free and resturaunts[resturaunt]["gluten-free"]:
+        continue
+    print(resturaunt)
