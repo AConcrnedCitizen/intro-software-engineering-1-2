@@ -11,8 +11,11 @@ class Employee:
 
     # Creates the pay slip as a string
     def __str__(self) -> str:
+        # Splits the name and gets the last name
+        # Turns the hours and the rate into floats to match the example
+        # Convert the tax and levy into percentages then calculates the deductions
         return f'''
-        ------- PAY SLIP -------
+        ------- PAY SLIP ------- 
         Employee Name: {self.name.split(" ")[-1:][0]}
         Hours Worked: {float(self.hours)}
         Pay Rate: ${float(self.rate)}
