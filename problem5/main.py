@@ -1,16 +1,22 @@
+'''
+*******************************
+Author:
+u3275885
+Assignment:
+Assessment 2 - Problem 5
+4/10/2024
+*******************************
+'''
+
 import model
 import view
 from controller import Inventory
 
+# Create an instance of the Inventory class
+inv = Inventory()
 
-a = Inventory()
-
-def dummy_data():
-    a.create_product(model.Groceries("1", "Apple", 1.99, "Fresh apple", "C:\\Users\\Conall\\Documents\\Projects\\intro-software-engineering-1-2\\problem5\\a.png", "2021-12-31"))
-    
-
-dummy_data()
-
-view = view.GraphicalUserInterface(a)
+# Create an instance of the GraphicalUserInterface class
+view = view.GraphicalUserInterface(inv)
+# Start the main loop
 view.run()
 

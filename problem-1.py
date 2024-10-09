@@ -1,3 +1,13 @@
+'''
+*******************************
+Author:
+u3275885
+Assignment:
+Assessment 2 - Problem 1
+4/10/2024
+*******************************
+'''
+
 class Employee:
     # Constructor
     def __init__(self, name, hours, rate, withholding_rate, levy):

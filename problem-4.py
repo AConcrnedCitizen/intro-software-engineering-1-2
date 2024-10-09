@@ -1,10 +1,21 @@
+'''
+*******************************
+Author:
+u3275885
+Assignment:
+Assessment 2 - Problem 4
+4/10/2024
+*******************************
+'''
 import turtle
 
 x = turtle.Turtle()
 x.speed(100)
 
+# Function to draw a circle with a specified colour
 def draw_circle(colour):
     x.fillcolor(colour)
+    # Fill the circle with the specified colour
     x.begin_fill()
     x.circle(8)
     x.end_fill()
@@ -16,11 +27,12 @@ def draw_rectangle(size, filled=False):
     if filled:
         x.begin_fill()
         
+    # Caluclate the width and height of the rectangle
     width = 100 * size
-    
     height = 200 * size
+    
     if filled:
-        height += 20
+        height += 20 # Increase the height if the rectangle is filled
     
     for i in range(2):
         x.forward(width)
@@ -31,6 +43,7 @@ def draw_rectangle(size, filled=False):
     if filled:
         x.end_fill()
 
+# Draw the traffic light
 draw_rectangle(1)
 x.penup()
 x.goto(10, 10)
